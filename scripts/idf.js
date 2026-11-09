@@ -1,0 +1,3 @@
+const E='H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe Cs Ba La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn Fr Ra Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og'.split(' ');
+const el=s=>{let t=0;for(let i=0;i<s.length;i++){if(E.includes(s.slice(i,i+2))){t+=E.indexOf(s.slice(i,i+2))+1;i++}else if(E.includes(s[i]))t+=E.indexOf(s[i])+1}return t};
+require('fs').readFileSync(0,'utf8').split(/\s+/).filter(Boolean).forEach(id=>{const d=[...id].filter(c=>/\d/.test(c)).reduce((a,c)=>a+ +c,0);if(!/[MDCLXVJjWw]/.test(id)&&d<=6&&el(id)<=122)console.log(d,el(id),id)});
