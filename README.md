@@ -4,6 +4,8 @@ Claude Code (`claude-opus-5-5`) finished all 35 rules of [The Password Game](htt
 
 **Result:** the game showed *"Congratulations! You have sucessfully chosen a password in 101 characters."* (`screenshots/complete.png`)
 
+**Video:** https://www.youtube.com/watch?v=FT890KqC44Q
+
 ## Statistics
 | Metric | Value |
 |---|---|
